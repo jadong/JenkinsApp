@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dabaoqi.jenkinsapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".app.JenkinsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".boot.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".joblist.JobListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jobdetail.JobDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jobdetail.TaskDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".jobdetail.DownloadDirActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".webview.WebViewActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
